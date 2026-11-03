@@ -1,0 +1,23 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "RUBOR — Casa de maquillaje",
+    "description": "Tienda de maquillaje en WordPress con WooCommerce. Proyecto académico de Sofía.",
+    "author": "Sofía"
+  },
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "features": { "networking": true },
+  "login": true,
+  "steps": [
+    { "step": "setSiteLanguage", "language": "es_CO" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "woocommerce" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "flamingo" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "wordpress-seo" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "creame-whatsapp-me" }, "options": { "activate": true } },
+    { "step": "installTheme", "themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/AGL-J/rubor-wordpress/main/rubor-tema-wordpress.zip" }, "options": { "activate": true } },
+    { "step": "setSiteOptions", "options": { "blogname": "RUBOR", "blogdescription": "Casa de maquillaje", "timezone_string": "America/Bogota", "woocommerce_coming_soon": "no" } },
+    { "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; require_once ABSPATH . 'wp-admin/includes/admin.php'; wp_set_current_user( 1 ); rubor_demo_import();" }
+  ]
+}
