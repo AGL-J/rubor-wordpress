@@ -1,0 +1,29 @@
+/*
+Theme Name: tema-estudiante (RUBOR)
+Theme URI: https://github.com/AGL-J/rubor-wordpress
+Author: Sofía
+Author URI: https://github.com/AGL-J/rubor-wordpress
+Description: Tema personalizado desarrollado desde cero para el curso de WordPress Avanzado. Tienda de maquillaje RUBOR con estética editorial, integrada con WooCommerce, Contact Form 7 + Flamingo, Yoast SEO, Joinchat, Cache Enabler, Modern Image Formats y Query Monitor. Incluye rol personalizado "Redactor Jr.", estudio de tonos interactivo e importador de contenido en Apariencia → RUBOR.
+Version: 3.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tema-estudiante
+Tags: custom-layout, responsive-layout, developer, e-commerce, blog, custom-logo, custom-menu, featured-images
+*/
+
+/*
+ * Hoja principal del tema (se carga con get_stylesheet_uri() en functions.php).
+ * El diseño completo está dividido en:
+ *   assets/css/rubor.css     → estilos base, componentes y responsive (media queries)
+ *   assets/css/rubor-wp.css  → estilos para WooCommerce, Contact Form 7 y plantillas de WordPress
+ */
+
+/* Barra lateral del Diario (sidebar.php) */
+.sidebar { max-width: 760px; margin: 72px auto 0; padding: 32px var(--gutter, 16px) 0; border-top: 1px solid rgba(31, 21, 18, 0.16); }
+.sidebar .widget + .widget { margin-top: 32px; }
+.sidebar .widget-title { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; margin: 0 0 14px; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.sidebar a:hover { color: #8e2b34; }
+.logo--img img { max-height: 48px; width: auto; }
