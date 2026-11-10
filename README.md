@@ -15,3 +15,9 @@ El enlace arma el sitio solo en 2 o 3 minutos. Al terminar, el sitio tiene:
 - 16 productos, 6 entradas y las páginas de la tienda.
 
 Los pagos son de demostración: no se cobra dinero real.
+
+## Evidencias para la revisión
+
+- `configuracion/wp-config-bastionado.php`: las constantes agregadas a `wp-config.php` (`DISALLOW_FILE_EDIT`, `WP_POST_REVISIONS`, `FORCE_SSL_ADMIN`).
+- `configuracion/.htaccess`: protección de `wp-config.php`, `Options -Indexes`, compresión GZIP y caché del navegador.
+- `medicion/`: informes de Lighthouse, el mismo motor de PageSpeed Insights, en modo celular. La puntuación pasó de **62** antes a **81** después de activar la caché, usar WebP y quitar los recursos que bloqueaban la carga.
